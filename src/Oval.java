@@ -22,7 +22,7 @@ public class Oval extends  Drawable{
 
     @Override
     public Drawable clone() {
-        return new  Oval(this.c,this.x,this.y,this.w,this.h);
+        return new  Oval(this.c,this.x+this.x*2,this.y+this.y*2,this.w,this.h);
     }
 }
 

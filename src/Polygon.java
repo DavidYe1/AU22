@@ -8,13 +8,19 @@ public class Polygon extends Drawable {
     int [] x;
     int [] y;
     int n;
+
     public Polygon(Color c,int[] x, int[] y, int n){
         this.n=n;
         this.x=x;
         this.y=y;
     }
 
-
+    public int[] cloneCoord(int[] a){
+        for (int i = 0; i < x.length; i++) {
+            a[i] = a[i] * 2;
+        }
+        return x;
+    }
     @Override
     public void draw(Graphics g) {
         g.drawPolygon(x,y,n);
@@ -22,6 +28,6 @@ public class Polygon extends Drawable {
 
     @Override
     public Drawable clone() {
-        return new Polygon(this.c,this.x,this.y,this.n);
+        return new Polygon(this.c,cloneCoord(this.x),cloneCoord(this.y),this.n);
     }
 }

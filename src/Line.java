@@ -24,6 +24,6 @@ public class Line extends Drawable {
 
     @Override
     public Drawable clone() {
-        return new Line(this.c,this.x1,this.y1,this.x2,this.y2);
+        return new Line(this.c,this.x1+5,this.y1+5,this.x2+5,this.y2+5);
     }
 }
