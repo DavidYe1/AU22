@@ -5,6 +5,15 @@ import java.awt.*;
  */
 public abstract class Drawable{
 
+    /**
+     * draw methode
+     * @param g
+     */
     public abstract void draw(Graphics g);
+
+    /**
+     * kopier methode
+     * @return konstruktor
+     */
     public abstract Drawable clone();
 }
